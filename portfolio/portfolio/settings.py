@@ -23,7 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#9cs03c*xrvb_5#oadk_*!giu$u0s^&(!02x7z%u=_w#i+-p_$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+import os
+
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = []
 
@@ -123,3 +126,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALLOWED_HOSTS = ['*']  # O luego pon el dominio que Render te dé
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

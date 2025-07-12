@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn portfolio.wsgi
+    envVars:
+      - key: DEBUG
+        value: False
