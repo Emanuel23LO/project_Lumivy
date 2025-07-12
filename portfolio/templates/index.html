@@ -1,0 +1,596 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Lumivy Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/education/logo.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/education/logo.jpg' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Lumivy
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+         <img src="{% static 'assets/img/education/logo.jpg' %}" alt="LUMYVY Logo" style="height: 40px; background-color: transparent;">
+         <h1 class="sitename">LUMIVY</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Casa</a></li>
+          <li><a href="{% url 'about' %}">Conocenos</a></li>
+          <li><a href="{% url 'contact' %}">Contactanos</a></li>
+          <li><a href="{% url 'our_works' %}">Nuestros trabajos</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="hero-container">
+        <video autoplay="" muted="" loop="" playsinline="" class="video-background">
+          <source src="{% static 'assets/img/education/video-2.mp4' %}" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
+              <div class="hero-content">
+                <h1>Diseñamos experiencias visuales y digitales</h1>
+                <p>Somos un equipo multidisciplinario que combina desarrollo web, producción audiovisual y fotografía profesional para potenciar la presencia digital de marcas con visión.</p>
+                <div class="cta-buttons">
+                  <a href="{% url 'contact' %}"class="btn-primary">Contactanos</a>
+                  <a href="{% url 'about' %}" class="btn-secondary">conocenos</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
+              <div class="stats-card">
+                <div class="stats-header">
+                  <h3>Ofrecemos</h3>
+                  <div class="decoration-line"></div>
+                </div>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                     <i class="bi bi-camera2"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>Fotografia</h4>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-camera-reels"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>Grabacion</h4>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-pencil-square"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>Ediciones</h4>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-globe2"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>Paginas Web</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+        <div class="row mission-vision-row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="value-card h-100">
+              <div class="card-icon">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <h3>Nuestra Mision</h3>
+              <p>Nuestra misión es impulsar el crecimiento de marcas y empresas a través de soluciones visuales y digitales innovadoras. Combinando desarrollo web, producción audiovisual y fotografía profesional para crear experiencias que conectan, inspiran y generan valor real.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="value-card h-100">
+              <div class="card-icon">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h3>Nuestra vision</h3>
+              <p>Ser una referencia creativa en el desarrollo de contenido visual y digital en Latinoamérica. Queremos posicionarnos como el aliado estratégico de marcas con visión, aportando tecnología, diseño y narrativa para destacar en un mundo cada vez más visual.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="value-card h-100">
+              <div class="card-icon">
+                <i class="bi bi-star"></i>
+              </div>
+              <h3>Nuestros Valores</h3>
+              <p>Creemos en el poder de las ideas bien ejecutadas. Valoramos el trabajo en equipo, la mejora constante y la conexión auténtica con nuestros clientes.</p>
+              <p> - Creatividad, innovación, compromiso y calidad.</p>
+            </div>
+          </div>
+        </div>
+
+         <div>
+            <br>
+            <br>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 class="display-6 fw-bold mb-4">Empoderando negocios <span>Formando mejores futuros</span></h2>
+            <p class="lead mb-4">A través de soluciones visuales, digitales y estratégicas, ayudamos a las marcas a crecer, destacarse y dejar huella.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-stack">
+              <div class="image-stack-item image-stack-item-top" data-aos="zoom-in" data-aos-delay="400">
+                <img src="{% static 'assets/img/education/Camara.jpg' %}" alt="Campus Life" class="img-fluid rounded-4 shadow-lg">
+              </div>
+              <div class="image-stack-item image-stack-item-bottom" data-aos="zoom-in" data-aos-delay="500">
+                <img src="{% static 'assets/img/education/lumivy.jpg' %}" alt="Students" class="img-fluid rounded-4 shadow-lg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Students Life Block Section -->
+    <section id="students-life-block" class="students-life-block section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Cubrimos Tus Necesidades</h2>
+        <p>Entendemos lo que tu marca necesita para destacar.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="students-life-img position-relative">
+              <img src="{% static 'assets/img/education/camaras-2.jpg' %}" class="img-fluid rounded-4 shadow-sm" alt="Students Life">
+              <div class="img-overlay">
+                <h3>Descubre mas a fondo nuestros servicios</h3>
+                <a href="students-life.html" class="explore-btn">Servicios<i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="students-life-content">
+
+              <div class="row g-4 mb-4">
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="student-activity-item">
+                    <div class="icon-box">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <h4>Te hacemos conocido</h4>
+                    <p>Con nuestra capacidad de crecimiento web podremos darte a conocer de la mejor manera</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="student-activity-item">
+                    <div class="icon-box">
+                      <i class="bi bi-trophy"></i>
+                    </div>
+                    <h4>Crecemos tu competitividad</h4>
+                    <p>lograremos con todo la seguridad que tu negocio llegue a ser de los mejores</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="student-activity-item">
+                    <div class="icon-box">
+                      <i class="bi bi-music-note-beamed"></i>
+                    </div>
+                    <h4>Cultura</h4>
+                    <p>haremos que tu negocio alcance un ambiente mas cultural</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="student-activity-item">
+                    <div class="icon-box">
+                      <i class="bi bi-globe-americas"></i>
+                    </div>
+                    <h4>Redes Sociales</h4>
+                    <p>Mejoraremos el contedido de tus redes sociales y pagina Web, para darte a conocer</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="students-life-cta" data-aos="fade-up" data-aos-delay="600">
+                <a href="{% url 'our_works' %}" class="btn btn-primary">Nuestros Trabajos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- Students Life Section -->
+    <section id="students-life" class="students-life section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="students-life-gallery mt-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="section-header text-center">
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+              <a href="{% static 'assets/img/education/foto_one.jpg' %}" class="gallery-item glightbox">
+                <img src="{% static 'assets/img/education/foto_one.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+              <a href="{% static 'assets/img/education/foto_two.jpg' %}" class="gallery-item glightbox">
+                <img src="{% static 'assets/img/education/foto_two.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+              <a href="{% static 'assets/img/education/foto_tree.jpg' %}" class="gallery-item glightbox">
+                <img src="{% static 'assets/img/education/foto_tree.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Students Life Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonios</h2>
+        <p>Mira el punto de vista de nuestros clientes</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="testimonial-masonry">
+
+          <div class="testimonial-item" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>Desde VIC-NI queremos darles las gracias por el gran trabajo realizado. Apreciamos su compromiso, creatividad y el cuidado con el que reflejaron la esencia de nuestro café. ¡Ha sido un gusto contar con ustedes!</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="{% static 'assets/img/education/Vicni.jpg' %}" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>VIC-NI</h3>
+                  <span class="position">Heladeria - Cafe</span>
+                </div>
+                <div class="social-links d-flex mt-4" style="position: absolute; bottom: 25px; right: 25px; font-size: 25px; color: #777;">
+                  <a href="https://www.instagram.com/vicni_cafe" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>En Olor Fragante queremos agradecerles por el excelente trabajo realizado. Valoramos su dedicación, creatividad y profesionalismo. Gracias por ayudarnos a resaltar la esencia de nuestra marca y conectar mejor con nuestros clientes.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="{% static 'assets/img/education/olor_fragante.png' %}" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Olor Fragante</h3>
+                  <span class="position">Perfumeria</span>
+                </div>
+                 <div class="social-links d-flex mt-4" style="position: absolute; bottom: 25px; right: 25px; font-size: 25px; color: #777;">
+                  <a href="https://www.instagram.com/olorfragante_oficial" target="_blank"><i class="bi bi-instagram"></i></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-content">
+              <div class="quote-pattern">
+                <i class="bi bi-quote"></i>
+              </div>
+              <p>En Biovida agradecemos profundamente el excelente trabajo que realizaron. Su profesionalismo y dedicación nos ayudaron a transmitir mejor nuestra misión de cuidar la salud y bienestar de nuestros pacientes en cada uno de nuestros centros.</p>
+              <div class="client-info">
+                <div class="client-image">
+                  <img src="{% static 'assets/img/education/biovida.jpg' %}" alt="Client">
+                </div>
+                <div class="client-details">
+                  <h3>Biovida</h3>
+                  <span class="position">Centro De Salud</span>
+                </div>
+                <div class="social-links d-flex mt-4" style="position: absolute; bottom: 25px; right: 25px; font-size: 25px; color: #777;">
+                  <a href="https://www.instagram.com/biovidamas" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </section><!-- /Testimonials Section -->
+
+
+    <section id="instagram-carousel" class="section">
+      <div class="container section-title" data-aos="fade-up">
+            <h2>Videos</h2>
+            <p>Nuestros trabajos</p>
+      </div><!-- End Section Title -->
+      <div class="container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLlc7IBPNP2/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLldZADPIqa/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLlf3Jxp8TQ/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+             <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLlc7IBPNP2/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLldZADPIqa/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLlf3Jxp8TQ/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+             <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLlc7IBPNP2/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLldZADPIqa/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLlf3Jxp8TQ/" data-instgrm-version="14" style="width:100%; min-width:326px;"></blockquote>
+            </div>
+
+            <!-- Puedes seguir agregando más slides aquí -->
+
+          </div>
+
+          <!-- Botón de siguiente -->
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">LUMIVY</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>▪︎ Damos luz a tu identidad ▪︎</p>
+          </div>
+          <div class="footer-contact pt-3">
+            <p>Colombia</p>
+          </div>
+          <div class="social-links d-flex mt-4">
+          <a href="https://wa.me/573225696521" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.instagram.com/lumivyoficial" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.tiktok.com/@lumivy_oficial" target="_blank"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Enlaces Utiles</h4>
+          <ul>
+            <li><a href="{% url 'index' %}">Casa</a></li>
+            <li><a href="{% url 'about' %}">Conocenos</a></li>
+            <li><a href="{% url 'contact' %}">Contactanos</a></li>
+            <li><a href="{% url 'our_works' %}">Nuestros trabajos</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nuestros Servicios</h4>
+          <ul>
+            <li><a href="#">Diseño Web</a></li>
+            <li><a href="#">Desarrollo Web</a></li>
+            <li><a href="#">Grabacion Audiovisual</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Edicion de Video</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">LUMIVY</strong> <span>TODOS LOS DERECHOS RESERVADOS</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+    <script>
+  const swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+    },
+    on: {
+      init: () => {
+        if (window.instgrm) {
+          instgrm.Embeds.process();
+        }
+      },
+      slideChangeTransitionEnd: () => {
+        if (window.instgrm) {
+          instgrm.Embeds.process();
+        }
+      }
+    }
+  });
+</script>
+
+<!-- Opcional: estilos para el tamaño -->
+<style>
+  .swiper-slide {
+    width: 320px;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: blur(2px) grayscale(0.5);
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.1);
+    filter: none;
+  }
+</style>
+
+</html>
