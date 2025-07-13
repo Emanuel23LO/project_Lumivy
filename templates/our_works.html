@@ -55,9 +55,15 @@
 
  <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/education/showcase-1.webp);">
-      <div class="container position-relative">
+        <!-- Page Title -->
+    <div class="page-title dark-background position-relative overflow-hidden">
+      <!-- Video de fondo -->
+      <video autoplay muted loop playsinline class="video-background position-absolute w-100 h-100" style="object-fit: cover; top: 0; left: 0; z-index: 0;">
+        <source src="{% static 'assets/img/education/Banner-2.mp4' %}" type="video/mp4">
+      </video>
+
+      <!-- Contenido sobre el video -->
+      <div class="container position-relative" style="z-index: 1;">
         <h1>Nuestros Trabajos</h1>
         <p>visualiza los trabajos que hemos realizado</p>
         <nav class="breadcrumbs">
@@ -66,7 +72,7 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <section id="instagram-carousel" class="section">
       <div class="container section-title" data-aos="fade-up">
@@ -251,24 +257,24 @@
             </div>
 
             <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-              <a href="{% static 'assets/img/education/foto_tree.jpg' %}" class="gallery-item glightbox">
-                <img src="{% static 'assets/img/education/foto_tree.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
+              <a href="{% static 'assets/img/education/camara_one.jpg' %}" class="gallery-item glightbox">
+                <img src="{% static 'assets/img/education/camara_one.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
                 <div class="gallery-overlay">
                 </div>
               </a>
             </div>
 
             <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-              <a href="{% static 'assets/img/education/foto_two.jpg' %}" class="gallery-item glightbox">
-                <img src="{% static 'assets/img/education/foto_two.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
+              <a href="{% static 'assets/img/education/hamburguesa-1.jpg' %}" class="gallery-item glightbox">
+                <img src="{% static 'assets/img/education/hamburguesa-1.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
                 <div class="gallery-overlay">
                 </div>
               </a>
             </div>
 
             <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
-              <a href="{% static 'assets/img/education/foto_tree.jpg' %}" class="gallery-item glightbox">
-                <img src="{% static 'assets/img/education/foto_tree.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
+              <a href="{% static 'assets/img/education/hamburguesa.jpg' %}" class="gallery-item glightbox">
+                <img src="{% static 'assets/img/education/hamburguesa.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
                 <div class="gallery-overlay">
                 </div>
               </a>
