@@ -58,19 +58,23 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-<div class="page-title dark-background" style="background-image: url(/static/assets/img/education/lumivy.jpg);">
-      <div class="container position-relative">
+    <div class="page-title dark-background position-relative overflow-hidden">
+      <!-- Video de fondo -->
+      <video autoplay muted loop playsinline class="video-background position-absolute w-100 h-100" style="object-fit: cover; top: 0; left: 0; z-index: 0;">
+        <source src="{% static 'assets/img/education/Banner-4.mp4' %}" type="video/mp4">
+      </video>
+
+      <!-- Contenido sobre el video -->
+      <div class="container position-relative" style="z-index: 1;">
         <h1>Conocenos</h1>
         <p>Visualisa nuestro grupo de trabajo y nuestra historia</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
-
+    </div>
 
     <section id="history" class="history section">
 
@@ -214,7 +218,7 @@ En LUMIVY no solo creamos imágenes: contamos historias que dejan huella.</p>
                 data-social="https://www.instagram.com/pflorez_007"> 
               <div class="leader-card card h-100 shadow-sm border-0">
                 <div class="leader-image text-center pt-4">
-                  <img src="{% static 'assets/img/person/pablo.jpg' %}" alt="Principal" class="img-fluid clickable-img rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                  <img src="{% static 'assets/img/person/pablo_2.jpg' %}" alt="Principal" class="img-fluid clickable-img rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
                 </div>
                 <div class="card-body text-center">
                   <h5 class="card-title mb-1">Juan Pablo</h5>
