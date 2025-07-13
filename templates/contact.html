@@ -58,17 +58,23 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(/static/assets/img/education/lumivy.jpg);">
-      <div class="container position-relative">
+    <div class="page-title dark-background position-relative overflow-hidden">
+      <!-- Video de fondo -->
+      <video autoplay muted loop playsinline class="video-background position-absolute w-100 h-100" style="object-fit: cover; top: 0; left: 0; z-index: 0;">
+        <source src="{% static 'assets/img/education/Banner-3.mp4' %}" type="video/mp4">
+      </video>
+
+      <!-- Contenido sobre el video -->
+      <div class="container position-relative" style="z-index: 1;">
         <h1>Contáctanos</h1>
         <p>Conoce los diferentes medios por los que te puedes comunicar con nosotros</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'index' %}">Casa</a></li>
+            <li><a href="index.html">Inicio</a></li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
