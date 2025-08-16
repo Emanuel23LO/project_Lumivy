@@ -223,9 +223,97 @@
 
     </section><!-- /News Hero Section -->
 
-        
+    <div class="page-title dark-background" style="background-image: url(/static/assets/img/education/lumivy.jpg);">
+      <div class="container position-relative">
+        <h1>Nuestro Portafolio</h1>
+        <p>Conoce los trabajo que hemos realizado.</p>
+      </div>
+    </div>
 
-    
+    <section id="students-life" class="students-life section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Videos</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Filtros -->
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">Todo</li>
+          <li data-filter=".filter-vicni">Vicni</li>
+          <li data-filter=".filter-fragante">Olor fragante</li>
+          <li data-filter=".filter-biovida">Biovida</li>
+          <li data-filter=".filter-barber">Barber</li>
+        </ul>
+
+        <!-- Contenedor de videos -->
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- VICNI -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-vicni">
+            <a href="{% static 'assets/img/education/FV-VICNI.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/FV-VICNI.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-vicni">
+            <a href="{% static 'assets/img/education/Vic-Nic.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/Vic-Nic.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <!-- OLOR FRAGANTE -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-fragante">
+            <a href="{% static 'assets/img/education/ASMR_PERFUME.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/ASMR_PERFUME.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-fragante">
+            <a href="{% static 'assets/img/education/reel_perfume_1.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/reel_perfume_1.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <!-- BARBER -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-barber">
+            <a href="{% static 'assets/img/education/BARBER_2_1080.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/BARBER_2_1080.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-barber">
+            <a href="{% static 'assets/img/education/BARBERIA_FINAL.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/BARBERIA_FINAL.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <!-- BIOVIDA -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-biovida">
+            <a href="{% static 'assets/img/education/BIOVIDA-.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/BIOVIDA-.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <section id="students-life" class="students-life section">
 
       <div class="container section-title" data-aos="fade-up">
@@ -385,58 +473,5 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
-
- <script>
-  const swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-    },
-    on: {
-      init: () => {
-        if (window.instgrm) {
-          instgrm.Embeds.process();
-        }
-      },
-      slideChangeTransitionEnd: () => {
-        if (window.instgrm) {
-          instgrm.Embeds.process();
-        }
-      }
-    }
-  });
-</script>
-
-<!-- Opcional: estilos para el tamaño -->
-<style>
-  .swiper-slide {
-    width: 320px;
-    height: auto;
-    transition: transform 0.5s ease, filter 0.5s ease;
-    filter: blur(2px) grayscale(0.5);
-  }
-
-  .swiper-slide-active {
-    transform: scale(1.1);
-    filter: none;
-  }
-</style>
 
 </html>
