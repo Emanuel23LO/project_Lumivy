@@ -539,7 +539,7 @@
 
 </body>
 
-    <script>
+<script>
   const swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -590,6 +590,18 @@
     transform: scale(1.1);
     filter: none;
   }
+
+  @media (max-width: 576px) {
+  .swiper-slide {
+    width: 240px !important; /* más angosto en celular */
+    min-width: 200px !important;
+  }
+
+  .instagram-media {
+    max-width: 100% !important;
+    min-width: 200px !important;
+  }
+}
 </style>
 
 </html>
