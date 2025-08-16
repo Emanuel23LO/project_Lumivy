@@ -158,6 +158,26 @@
               </article>
 
             </div>
+
+            <div class="col-lg-3">
+            <div class="side-posts">
+              <!-- Side Post 3 -->
+              <article class="post-item side-post" data-aos="fade-left" data-aos-delay="100">
+                <div class="post-img">
+                  <img src="{% static 'assets/img/education/concolas.jpg' %}" alt="Post Image" class="img-fluid" loading="lazy">
+                  <span class="category technology">CONCOLAS</span>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="#">En Concolas, cada momento refleja la alegría, la libertad y el cariño de los perritos disfrutando de un lugar hecho para ellos.</a>
+                  </h3>
+                  <div class="post-meta">
+                    <span>Julio 12, 2025</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
           </div>
         </div>
 
@@ -176,10 +196,11 @@
         <!-- Filtros -->
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">Todo</li>
-          <li data-filter=".filter-vicni">Vicni</li>
-          <li data-filter=".filter-fragante">Olor fragante</li>
-          <li data-filter=".filter-biovida">Biovida</li>
-          <li data-filter=".filter-barber">Barber</li>
+          <li data-filter=".filter-vicni">VIC-NI</li>
+          <li data-filter=".filter-fragante">OLOR FRAGANTE</li>
+          <li data-filter=".filter-biovida">BIOVIDA</li>
+          <li data-filter=".filter-barber">BLACK DIAMOND</li>
+          <li data-filter=".filter-concolas">CONCOLAS</li>
         </ul>
 
         <br>
@@ -243,6 +264,23 @@
             <a href="{% static 'assets/img/education/BIOVIDA-.mp4' %}" class="gallery-item glightbox">
               <video class="img-fluid" autoplay muted loop playsinline>
                 <source src="{% static 'assets/img/education/BIOVIDA-.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <!-- CONCOLAS -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-concolas">
+            <a href="{% static 'assets/img/education/ConColas_uno.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/ConColas_uno.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-concolas">
+            <a href="{% static 'assets/img/education/ConColas_dos.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/ConColas_dos.mp4' %}" type="video/mp4">
               </video>
             </a>
           </div>
@@ -461,6 +499,6 @@
       background: #000000;
     }
   </style>
-  
+
 
 </html>
