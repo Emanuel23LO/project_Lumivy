@@ -415,29 +415,56 @@
   <!-- Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
 
-</body>
+</body> 
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    let portfolioContainer = document.querySelector('.portfolio-container');
-    if (portfolioContainer) {
-      let iso = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let portfolioContainer = document.querySelector('.portfolio-container');
+      if (portfolioContainer) {
+        let iso = new Isotope(portfolioContainer, {
+          itemSelector: '.portfolio-item'
+        });
 
-      let filters = document.querySelectorAll('#portfolio-flters li');
-      filters.forEach(filter => {
-        filter.addEventListener('click', function(e) {
-          e.preventDefault();
-          filters.forEach(f => f.classList.remove('filter-active'));
-          this.classList.add('filter-active');
-          iso.arrange({
-            filter: this.getAttribute('data-filter')
+        let filters = document.querySelectorAll('#portfolio-flters li');
+        filters.forEach(filter => {
+          filter.addEventListener('click', function(e) {
+            e.preventDefault();
+            filters.forEach(f => f.classList.remove('filter-active'));
+            this.classList.add('filter-active');
+            iso.arrange({
+              filter: this.getAttribute('data-filter')
+            });
           });
         });
-      });
+      }
+    });
+  </script>
+
+  <style>
+    #portfolio-flters {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-  });
-</script>
+
+    #portfolio-flters li {
+      cursor: pointer;
+      margin: 0 12px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    #portfolio-flters li:hover {
+      color: #fff;
+      background: #0d6efd;
+    }
+
+    #portfolio-flters li.filter-active {
+      color: #fff;
+      background: #0d6efd;
+    }
+  </style>
 
 </html>
