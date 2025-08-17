@@ -191,12 +191,13 @@
 
         <!-- Filtros -->
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">Todo</li>
+          <li data-filter="*" class="filter-active">TODO</li>
           <li data-filter=".filter-vicni">VIC-NI</li>
           <li data-filter=".filter-fragante">OLOR FRAGANTE</li>
           <li data-filter=".filter-biovida">BIOVIDA</li>
           <li data-filter=".filter-barber">BLACK DIAMOND</li>
           <li data-filter=".filter-concolas">CONCOLAS</li>
+          <li data-filter=".filter-otros">OTROS</li>
         </ul>
 
         <br>
@@ -217,6 +218,15 @@
             <a href="{% static 'assets/img/education/Vic-Nic.mp4' %}" class="gallery-item glightbox">
               <video class="img-fluid" autoplay muted loop playsinline>
                 <source src="{% static 'assets/img/education/Vic-Nic.mp4' %}" type="video/mp4">
+              </video>
+            </a>
+          </div>
+
+          <!-- OTROS -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-otros">
+            <a href="{% static 'assets/img/education/CABALGATA.mp4' %}" class="gallery-item glightbox">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="{% static 'assets/img/education/CABALGATA.mp4' %}" type="video/mp4">
               </video>
             </a>
           </div>
@@ -338,7 +348,7 @@
               </a>
             </div>
 
-                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
               <a href="{% static 'assets/img/education/foto_five.jpg' %}" class="gallery-item glightbox">
                 <img src="{% static 'assets/img/education/foto_five.jpg' %}" class="img-fluid" loading="lazy" alt="Student Life">
                 <div class="gallery-overlay">
