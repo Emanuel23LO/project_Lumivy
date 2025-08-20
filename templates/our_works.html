@@ -58,13 +58,14 @@
         <!-- Page Title -->
     <div class="page-title dark-background position-relative overflow-hidden">
       <!-- Video de fondo -->
-        <div class="video-background">
-          <iframe src="https://player.vimeo.com/video/1111807933?autoplay=1&muted=1&loop=1&background=1" 
-                  frameborder="0" 
-                  allow="autoplay; fullscreen; picture-in-picture" 
-                  allowfullscreen>
-          </iframe>
-        </div>
+      <div class="video-background">
+        <iframe 
+          src="https://player.vimeo.com/video/1111807933?autoplay=1&muted=1&loop=1&background=1" 
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
       <!-- Contenido sobre el video -->
       <div class="container position-relative" style="z-index: 1;">
@@ -523,7 +524,7 @@
     }
   }
 
-  .video-background {
+.video-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -537,13 +538,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* relación 16:9 */
-  min-height: 100vh;
-  min-width: 177.77vh; /* relación inversa 9:16 */
+  width: 120%;   /* más ancho que el contenedor */
+  height: 120%;  /* más alto que el contenedor */
   transform: translate(-50%, -50%);
-  object-fit: cover;
-  pointer-events: none; /* evita que el usuario haga clic en el video */
+  pointer-events: none; /* evita interacción con el video */
 }
 </style>
 
