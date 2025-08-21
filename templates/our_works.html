@@ -545,42 +545,30 @@
 
 
  /* Quita espacios entre columnas */
-  .portfolio-item {
-    padding: 0 !important; /* Eliminamos padding extra para que el gutter sea controlado por Bootstrap */
-  }
+/* Ajusta los márgenes entre videos */
+.portfolio-item {
+  padding: 5px !important;
+}
 
-  /* Para dar un ligero borde redondeado y fondo negro dentro del área del video (opcional) */
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 177.77%; /* Relación 9:16 para video vertical (reel) */
-    height: 0;
-    overflow: hidden;
-    background: #000; /* importante para que no se vea blanco mientras carga */
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  }
+/* Mantener relación 16:9 (más corto) */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* relación 16:9 */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 8px; /* opcional, bordes redondeados */
+}
 
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  /* Opcional: que las etiquetas del filtro no rompan en móviles */
-  #portfolio-flters li {
-    margin: 0 8px;
-    cursor: pointer;
-    list-style: none;
-  }
-
-  /* Si quieres más espacio entre filas, ajusta margin-bottom en los items */
-  @media (min-width: 992px) {
-    .portfolio-item { margin-bottom: 8px; } /* espacio extra vertical */
-  }
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 </style>
 
 
