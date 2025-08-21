@@ -55,35 +55,45 @@
 
  <main class="main">
     
-    <section id="hero" class="hero section dark-background">
-      <div class="hero-container position-relative" style="min-height:100vh;">
+<section id="hero" class="hero section dark-background">
+  <!-- altura del hero (ajusta 70–90vh a gusto) -->
+  <div class="position-relative" style="height:75vh;">
 
-        <!-- Video de fondo -->
-       <div class="video-background position-absolute top-0 start-0 w-100 h-100" style="z-index:0; overflow:hidden;">
-          <iframe 
-            src="https://player.vimeo.com/video/1111807933?autoplay=1&muted=1&loop=1&background=1"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            style="width:100%; height:100%; object-fit:cover; border:0; pointer-events:none;">
-          </iframe>
-        </div>
-        <!-- Oscurecer para legibilidad -->
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,.35); z-index:1;"></div>
+    <!-- Video de fondo -->
+    <div style="position:absolute; inset:0; z-index:0; overflow:hidden;">
+      <iframe
+        src="https://player.vimeo.com/video/1111807933?background=1&autoplay=1&muted=1&loop=1"
+        allow="autoplay; fullscreen; picture-in-picture"
+        frameborder="0"
+        style="position:absolute; top:50%; left:50%;
+               width:100vw; height:56.25vw;         /* 16:9 */
+               min-width:177.77vh; min-height:100%;  /* cubre siempre */
+               transform:translate(-50%,-50%);
+               border:0; pointer-events:none;">
+      </iframe>
+    </div>
 
-        <!-- Contenido centrado -->
-        <div class="container d-flex flex-column align-items-center justify-content-center text-center position-relative min-vh-100" style="z-index:2; color:#fff;">
-          <h1 class="mb-2">Nuestros Trabajos</h1>
-          <p class="mb-3">Una muestra de nuestros proyectos audiovisuales</p>
-          <nav class="breadcrumbs">
-            <ol class="list-unstyled d-flex gap-2 justify-content-center mb-0">
-              <li><a href="{% url 'index' %}" style="color:#fff; text-decoration:underline;">Inicio</a></li>
-            </ol>
-          </nav>
-        </div>
+    <!-- Oscurecedor para legibilidad -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,.4); z-index:1;"></div>
 
-      </div>
-    </section>
+    <!-- Contenido centrado -->
+    <div class="container d-flex flex-column align-items-center justify-content-center text-center"
+         style="position:relative; z-index:2; height:100%; color:#fff;">
+      <h1 style="font-weight:700; line-height:1.1; font-size:clamp(28px,5vw,56px);">
+        Nuestros Trabajos
+      </h1>
+      <p style="max-width:800px; margin:.5rem auto 1rem; font-size:clamp(14px,1.6vw,20px);">
+        Una muestra de nuestros proyectos audiovisuales
+      </p>
+      <nav class="breadcrumbs">
+        <ol class="list-unstyled d-flex gap-2 justify-content-center mb-0">
+          <li><a href="{% url 'index' %}" style="color:#fff; text-decoration:underline;">Inicio</a></li>
+        </ol>
+      </nav>
+    </div>
+
+  </div>
+</section>
 
 
     <section id="news-hero" class="news-hero section">
@@ -531,31 +541,9 @@
     }
   }
 
-.hero-container {
-  position: relative;
-  height: 70vh; /* o 80vh según lo alto que quieras */
-  min-height: 400px; /* para que nunca quede demasiado bajo */
-}
 
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
 
-.video-background iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;   /* más ancho que el contenedor */
-  height: 120%;  /* más alto que el contenedor */
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* evita interacción con el video */
-}
+
 </style>
 
 
