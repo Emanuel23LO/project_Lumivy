@@ -538,28 +538,30 @@
   pointer-events: none; /* evita que el usuario haga clic en el video */
 }
 
+
+ /* Quita espacios entre columnas */
 .portfolio-item {
-    padding: 2px !important; /* pon 0 si quieres que no haya nada de espacio */
-  }
+  padding: 2px !important; /* pon 0 si quieres 100% pegados */
+}
 
-  /* Contenedor responsivo para videos */
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* relación 16:9 */
-    height: 0;
-    overflow: hidden;
-    background: #000;
-  }
+/* Todos los videos en formato vertical 9:16 */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 177.77%; /* relación 9:16 */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
 
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 </style>
 
 
