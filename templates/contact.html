@@ -56,31 +56,33 @@
   </header>
 
   <main class="main">
+    
+    <section id="hero" class="hero section dark-background">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background position-relative overflow-hidden">
-      <!-- Video de fondo -->
-
-      <div class="video-background">
-          <iframe 
-            src="https://player.vimeo.com/video/1111807953?autoplay=1&muted=1&loop=1&background=1" 
-            frameborder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowfullscreen>
+      <div class="hero-container">
+        <div class="video-background">
+          <iframe src="https://player.vimeo.com/video/1111807953?autoplay=1&muted=1&loop=1&background=1" 
+                  frameborder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowfullscreen>
           </iframe>
-      </div>
+        </div>
 
-      <!-- Contenido sobre el video -->
-      <div class="container position-relative" style="z-index: 1;">
-        <h1>Contáctanos</h1>
-        <p>Conoce los diferentes medios por los que puedes comunicarte con nosotros.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="{% url 'index' %}">Inicio</a></li>
-          </ol>
-        </nav>
+        <div class="container position-relative" style="z-index: 1;">
+          <div class="row align-items-center">
+            <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
+              <div class="hero-content">
+                <h1>Contáctanos</h1>
+                <p>Conoce los diferentes medios por los que puedes comunicarte con nosotros.</p>
+                <div class="cta-buttons">
+                  <a href="{% url 'index' %}"class="btn-primary">Inicio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section><!-- /Hero Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -247,10 +249,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120%;   /* más ancho que el contenedor */
-  height: 120%;  /* más alto que el contenedor */
+  width: 100vw;
+  height: 56.25vw; /* relación 16:9 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* relación inversa 9:16 */
   transform: translate(-50%, -50%);
-  pointer-events: none; /* evita interacción con el video */
+  object-fit: cover;
+  pointer-events: none; /* evita que el usuario haga clic en el video */
 }
 
 
