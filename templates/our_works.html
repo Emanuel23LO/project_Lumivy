@@ -81,9 +81,6 @@
           </div>
         </div>
       </div>
-
-
-
     </section><!-- /Hero Section -->
 
 
@@ -555,7 +552,26 @@
   pointer-events: none; /* evita que el usuario haga clic en el video */
 }
 
+.hero {
+  position: relative;
+  height: 100vh; /* pantalla completa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* centra el texto horizontal */
+}
 
+.hero h1 {
+  font-size: 4rem; /* más grande que el h1 normal */
+  font-weight: 800;
+  color: white; /* para que resalte sobre el video */
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #ddd;
+}
 </style>
 
 
